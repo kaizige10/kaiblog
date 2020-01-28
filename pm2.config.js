@@ -1,4 +1,5 @@
 // 参考：https://pm2.keymetrics.io/docs/usage/application-declaration/
+// 注意：必须在pm2.config.js的目录下执行pm2 start命令，否则可能会报错（如找不到文件等）
 module.exports = {
     apps: [
         {
