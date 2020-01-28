@@ -1,0 +1,22 @@
+{
+  "name": "kaizigeblog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "github-webhook-handler": "^1.0.0",
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-comment": "^0.7.2",
+    "vuepress-theme-reco": "^1.2.1"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "express": "^4.17.1",
+    "glob": "^7.1.6"
+  }
+}
