@@ -56,11 +56,12 @@ try {
         return new Promise((resolve, reject) => {
             const spawn = require('child_process').spawn
             const child = spawn(cmd, args)
+            const name = cmd + args ? args.join(' ') : ''
 
             child.stdout.on('data', buffer => log(buffer.toString()))
-            child.stdout.on('end', () => resolve(`${cmd} ${args ? args : ''}命令执行成功`))
+            child.stdout.on('end', () => resolve(`${name} 命令执行成功`))
 
-            child.stderr.on('data', error => log(chalk.red(`${cmd}命令执行异常，原因：${error}`)))
+            child.stderr.on('data', error => log(chalk.red(`${name} 命令执行异常，原因：${error}`)))
         })
         
     }
