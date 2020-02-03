@@ -39,9 +39,9 @@ module.exports = {
                 ],
                 sidebar: sidebar,
                 // sidebar: 'auto',
-                smoothScroll: true,
             }
-        }
+        },
+        smoothScroll: true,
     },
     markdown: {
         lineNumbers: true
