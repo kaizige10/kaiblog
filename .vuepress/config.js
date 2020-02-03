@@ -24,15 +24,24 @@ const sidebar = [// 侧边栏，默认首页
 ].concat(sidebarAutoConfigs);
 
 module.exports = {
-    title: '凯子歌的博客',
-    description: '开始练手~',
+    locales: {
+        '/': {
+            lang: 'zh-CN',
+            title: '凯子歌的博客',
+            description: '前端小菜鸟',
+        }
+    },
     themeConfig: {
-        nav: [// 导航栏
-            { text: '首页', link: '/' }
-        ],
-        sidebar: sidebar,
-        // sidebar: 'auto',
-        smoothScroll: true,
+        locales: {
+            '/': {
+                nav: [// 导航栏
+                    { text: '首页', link: '/' }
+                ],
+                sidebar: sidebar,
+                // sidebar: 'auto',
+                smoothScroll: true,
+            }
+        }
     },
     markdown: {
         lineNumbers: true

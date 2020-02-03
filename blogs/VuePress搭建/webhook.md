@@ -53,7 +53,7 @@ handler.on('*', event => {
     console.log('received', event.payload)
 })
 ```
-::: tip
+::: tip 提示
 [github-webhook-handler](https://github.com/rvagg/github-webhook-handler)是一个npmjs模块，帮助我们更加轻松地使用Webhooks服务。
 :::
 启动服务以后，在github通过Redeliver发送一次请求：
