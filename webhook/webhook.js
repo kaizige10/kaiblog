@@ -56,7 +56,7 @@ try {
         return new Promise((resolve, reject) => {
             const spawn = require('child_process').spawn
             const child = spawn(cmd, args)
-            const name = cmd + args ? args.join(' ') : ''
+            const name = cmd + Array.isArray(args) ? args.join(' ') : ''
 
             child.stdout.on('data', buffer => log(buffer.toString()))
             child.stdout.on('end', () => resolve(`${name} 命令执行成功`))
