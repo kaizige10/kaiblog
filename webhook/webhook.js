@@ -52,11 +52,11 @@ try {
         }
     })
 
-    function run_cmd(cmd, args) {
+    function run_cmd(cmd, args = []) {
         return new Promise((resolve, reject) => {
             const spawn = require('child_process').spawn
             const child = spawn(cmd, args)
-            const name = cmd + Array.isArray(args) ? args.join(' ') : ''
+            const name = cmd + args.join(' ')
 
             child.stdout.on('data', buffer => log(buffer.toString()))
             child.stdout.on('end', () => resolve(`${name} 命令执行成功`))
