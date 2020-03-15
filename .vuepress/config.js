@@ -59,6 +59,7 @@ module.exports = {
                     path: '<%- frontmatter.to.path %>',// 解决vuepress切换页面时评论无法刷新的问题
                 }
             }
-        ]
+        ],
+        '@vuepress/medium-zoom',//图片优雅缩放
     ]
 }
